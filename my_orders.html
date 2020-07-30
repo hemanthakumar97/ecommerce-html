@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/cart.css">
+    <title>HKTECH | Cart</title>
+    <style>
+        *{
+            padding: 0; 
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        body{
+            background:#F3F3F3;
+        }
+        
+        nav{
+            background: black;
+            height: 60px;
+            width: 100%;
+        }
+        
+        label.logo{
+            font-size: 30px;
+            padding-left:100px;
+            line-height: 60px;
+        }
+        
+        nav ul{
+            float: right;
+            margin-right: 100px;
+        }
+        
+        nav ul li{
+            line-height: 60px;
+            margin: 0px 25px;
+        }
+        
+        nav ul li a{
+            font-size: 16px;
+            padding: 6px 13px;
+            border-radius: 10px;
+            color: white;
+            font-family: 'Segoe UI';
+            font-weight: bold;
+        }
+
+        nav label{
+            color: white;
+            font-family: 'Segoe UI';
+            font-weight: bold;
+        }
+
+
+
+    
+        .cart_content{
+            margin-left: 50px;
+            display: block;
+            width: 85%;
+        }
+        .deli_mob{
+            display: none;
+        }
+        .deli_web{
+            line-height: 30px;
+        }
+        .cart_item{
+            padding-left: 50px;
+            grid-template-columns: 150px 300px 200px 200px;
+        }
+
+        @media (max-width:600px){
+            .cart_content{
+                zoom:85%;
+                margin: 10px;
+            }
+            .deli_mob{
+                display: block;
+                line-height: 25px;
+            }
+            .deli_web{
+                display: none;
+            }
+            .cart_item{
+                width: 100%;
+                grid-template-columns: 30% 70%;
+                padding-left: 20px;
+                grid-column-gap: 25px;
+            }
+        }
+        
+    </style>
+
+</head>
+<body>
+    <nav>
+        <a href="index.html"><label class='logo'>HKTECH SHOP</label></a>
+         <ul class="nav_link">
+             <!-- <li><a href="#">Hello Hemanth</a></li> -->
+             <!-- <li><a href="payment.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i> cart</a></li> -->
+        </ul>
+    </nav>
+
+    <div class="cart_head">
+        <h2 id='title'>My Orders</h2> 
+    </div>
+    <div class="cart_content">
+        <div class="my_orders">
+
+            
+                        <!-- item 1 -->
+                        <div class="cart_item">
+                            <div class="item_image"><img src="images/iphone10.jpg" alt=""></div>
+                            <div class="item_description">
+                                <h2>Apple 11 Pro</h2>
+                                <div class="rating">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <p style="display: inline;"><b>Style: </b> 8GB </p>
+                                <p style="display: inline;"><b> Color: </b> Black</p>
+                                <div class="deli_mob">
+                                <h3>RS. 700000</h3>
+                                <p>Delivered on <b>Date</b></p>
+                                <p>Return policy valid till <b>Date</b></p>
+                                </div>
+                            </div>
+                            <div class="deli_web"><br>
+                                <h2>70000</h2>
+                            </div>
+                            <div class="deli_web"><br>
+                                <p>Delivered on <b>Date</b></p>
+                                <p>Return policy valid till <b>Date</b></p>
+                            </div>
+                        </div>
+
+                        
+
+
+
+                                    <!-- item 2 -->
+            <div class="cart_item">
+                <div class="item_image"><img src="images/iphone10.jpg" alt=""></div>
+                <div class="item_description">
+                    <h2>Apple 11 Pro</h2>
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <p style="display: inline;"><b>Style: </b> 8GB </p>
+                    <p style="display: inline;"><b> Color: </b> Black</p>
+                    <div class="deli_mob">
+                    <h3>RS. 700000</h3>
+                    <p>Delivered on <b>Date</b></p>
+                    <p>Return policy valid till <b>Date</b></p>
+                    </div>
+                </div>
+                <div class="deli_web"><br>
+                    <h2>70000</h2>
+                </div>
+                <div class="deli_web"><br>
+                    <p>Delivered on <b>Date</b></p>
+                    <p>Return policy valid till <b>Date</b></p>
+                </div>
+            </div>
+
+
+
+
+
+                        <!-- item 3 -->
+                        <div class="cart_item">
+                            <div class="item_image"><img src="images/iphone10.jpg" alt=""></div>
+                            <div class="item_description">
+                                <h2>Apple 11 Pro</h2>
+                                <div class="rating">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <p style="display: inline;"><b>Style: </b> 8GB </p>
+                                <p style="display: inline;"><b> Color: </b> Black</p>
+                                <div class="deli_mob">
+                                <h3>RS. 700000</h3>
+                                <p>Delivered on <b>Date</b></p>
+                                <p>Return policy valid till <b>Date</b></p>
+                                </div>
+                            </div>
+                            <div class="deli_web"><br>
+                                <h2>70000</h2>
+                            </div>
+                            <div class="deli_web"><br>
+                                <p>Delivered on <b>Date</b></p>
+                                <p>Return policy valid till <b>Date</b></p>
+                            </div>
+                        </div>
+
+                        
+
+
+                                    <!-- item 4 -->
+            <div class="cart_item">
+                <div class="item_image"><img src="images/iphone10.jpg" alt=""></div>
+                <div class="item_description">
+                    <h2>Apple 11 Pro</h2>
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <p style="display: inline;"><b>Style: </b> 8GB </p>
+                    <p style="display: inline;"><b> Color: </b> Black</p>
+                    <div class="deli_mob">
+                    <h3>RS. 700000</h3>
+                    <p>Delivered on <b>Date</b></p>
+                    <p>Return policy valid till <b>Date</b></p>
+                    </div>
+                </div>
+                <div class="deli_web"><br>
+                    <h2>70000</h2>
+                </div>
+                <div class="deli_web"><br>
+                    <p>Delivered on <b>Date</b></p>
+                    <p>Return policy valid till <b>Date</b></p>
+                </div>
+            </div>
+
+
+        </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+form{
+    font-weight: normal;
+    padding: 10px 30px;    
+    width: 60%;
+    margin-top: 20px;
+    background: white;
+    margin-left: 20%;
+    line-height: 40px;
+    font-family: Arial,sans-serif;
+    filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.4));
+}
+      
+label.logo{
+    font-size: 30px;
+    padding-left:100px;
+    line-height: 60px;
+}
+
+nav{
+    background: black;
+    height: 60px;
+    width: 100%;
+}
+
+form input[type=radio], i, img{
+    margin-right: 10px;
+}
+
+form button{
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    margin: 13px 35%;
+    padding: 10px 10px;
+    width: 20%;
+    border: 2px solid #07CB79;
+    background: black;
+    outline: none;
+    box-shadow: 0 0 5px black;
+}
+
+form button:hover{
+    background: #07CB79;
+    border: 2px solid black;
+    box-shadow: 0 0 5px black;
+}
+
+form h3, form h2{
+    margin-top: 20px;
+    margin-bottom: -10px;
+}
+.footer{
+    text-align: center;
+    background: black;
+    padding: 10px 100px;
+    color: white;
+    font-weight: normal;
+}
+
+.footer a{
+    text-decoration: none;
+    padding: 10px 30px;
+    color: white;
+    line-height: 35px;
+}
+
+.footer p{
+    line-height: 10px;
+    font-size: 13px;
+}
+
+@media (max-width:1024px){
+    form{
+        zoom:80%;
+        width: 90%;
+        margin:5%;
+    }
+
+    .icon-container{
+        zoom:60%;
+        padding-left: 25px;
+    }
+    form button{
+        width:120px;
+        }
+}
+
+@media (max-width:380px){
+    form{
+        zoom:60%;
+     }
+
+     label.logo{
+        padding-left:50px;
+    }
+}

@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/payment.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>HKTECH | Payment</title>
+    <style>
+        *{
+            padding: 0; 
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        
+        a{
+            color: white;
+        }
+        
+        body{
+            font-family: 'Segoe UI';
+            font-weight: bold;
+        }
+
+        body{
+            background: #F3F3F3;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html"><label class='logo'>HKTECH SHOP</label></a>
+    </nav>
+    <form class='payment'>
+        <h1 align='center' style="margin-top: 10px; margin-bottom:15px;">Select a payment method</h1>
+        <h2>Your saved credit and debit cards</h2>
+        <input  type="radio" name="payment_mode"><b>Kotak Bank Credit Card</b> ending in 1047 <br>
+        <input type="radio" name="payment_mode"><b>Kotak Bank Debit Card</b> ending in 0042 <br>
+        <h3>Another payment method</h3>
+        <input type="radio" name="payment_mode" id=""><b >Add Debit/Credit/ATM Card</b><br>
+        <div class="icon-container">
+            <i class="fa fa-cc-visa fa-3x" style="margin-left: 25px; color:navy;"></i>
+            <img src="paymnet_icons/mastercard.png" height="40px" alt="">
+            <img src="paymnet_icons/mastrocard.png" height="40px" alt="">
+            <img src="paymnet_icons/american-express.png" height="40px" alt="">
+            <img src="paymnet_icons/diners-club.png" height="40px" alt="">            
+            <i class="fa fa-cc-discover fa-3x" style="color:orange;"></i>
+            <img src="paymnet_icons/Bajaj-Finserv-Logo1.png" height="40px" alt="">            
+        </div>
+        <input type="radio" name="payment_mode" id=""><b>Net Banking</b><br>
+        <input type="radio" name="payment_mode" id=""><b>EMI</b><br>
+        <input type="radio" name="payment_mode" id=""><b>Pay on Delivery</b><br>
+        <button>Continue</button>
+    </form><br><br>
+</body>
+</html>

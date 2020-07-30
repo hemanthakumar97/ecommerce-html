@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="css/user.css">
+    <title>HKTECH SHOP</title>
+</head>
+<style>
+.mid-box{
+    height: auto;
+    width: 90%;
+    padding-left: 50px;
+}
+#manage_addr, #saved_cards, #add_addr, #add_card{
+    display: none;
+}
+
+.inline{
+    display: inline;
+}
+.fr{
+    float: right;
+    margin-right: 10px;
+}
+a{
+    line-height: 25px;
+}
+.pin_mob{
+    display: none;
+}
+.acc_info{
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: 35% 65%;
+    margin: 10px 50px;
+}
+form input[type=text], form input[type=email], form input[type=password], textarea{
+    width: 74%;
+    height: 50px;
+}
+.addr, .add{
+    width: 74%;
+}
+
+.add{
+    cursor: pointer;
+    line-height: 30px;
+}
+.addr li, .mid-box ul li a{
+    color: black;
+}
+input[type=radio]:checked{
+    color: green;
+}
+.buttons{
+    position: relative;
+    left: 35%;
+    transform: translate(-50%,0);
+}
+
+textarea{
+    resize: none;
+}
+.buttons button, .buttons input{
+    margin: 10px 30px;
+}
+
+.mid-box ul li{
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 40px; ;
+    padding-left: 10px;
+}
+form input[name='first_name'], form input[name='last_name'], 
+form input[name='exp_dt'], form input[name='cvv']{
+    display: inline;
+    width: 35%;
+    margin-right: 3%;
+}
+
+@media (max-width:500px){
+
+    .acc_info{
+        display: block;
+    }
+    .pin_web{
+        display: none;
+    }
+    .pin_mob{
+        display: block;
+    }
+    .acc_info{
+        margin: 10px;
+    }
+    .mid-box{
+        width: 100%;
+        padding-left: 30px;
+    }
+
+    form input[type=text], form input[type=email], form input[type=password], textarea{
+        width: 98%;
+        height: 60px;
+    }
+    .add, .addr{
+        width: 98%;
+    }
+    .buttons{
+        position: relative;
+        left: 20%;
+    }    
+    form input[name='first_name'], form input[name='last_name'],
+    form input[name='exp_dt'], form input[name='cvv']{
+        display: inline;
+        width: 47%;
+        margin-right: 2%;
+    }
+}
+</style>
+<body>
+
+    <div class="acc_info">
+
+        <!-- Profile Information -->
+        <div class="left_nav">
+            <div class="mid-box">
+                <h2>ACCOUNT SETTINGS</h2>
+                <ul>
+                    <li onclick="personal_info()">Personal Information</li>
+                    <li onclick="manage_addr()">Manage Addresses</li>
+                    <!-- <li onclick="change_password()">Change Password</li> -->
+                    <li><a href="change_password.html">Change Password</a></li>
+                </ul><br>
+                <h2>PAYMENTS</h2>
+                <ul>
+                    <li onclick="saved_cards()">Saved Cards</li>
+                    <li onclick="wallet()">Wallet</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div>
+            <div class="mid-box" id ='personal_info'>
+                <form action="#"><br>
+                    <h1>Personal Information</h1>
+                    <input type="text" placeholder="First Name" name="first_name" required>
+                    <input type="text" placeholder="Last Name" name="last_name">
+                    <h3>Your Gender</h3>
+                    <label for="male">Male</label>
+                    <input type="radio" id="male" name='gender' required>
+                    <label for="female">Female</label>
+                    <input type="radio" id="female" name='gender'><br><br>
+                    <h3>Email Address</h3>
+                    <input type="email" placeholder="Email" name='email' required>
+                    <h3>Mobile Number</h3>
+                    <input type="text" placeholder="Mobile Number"><br>
+                    <div class="buttons">
+                        <input type="submit" value="Save"> 
+                        <!-- <button type="cancel">Cancel</button>  -->
+                        <!-- <input style="margin-left: 50px;" type="submit" name="cancel" value="cancel" onclick="history.go(-1)"/>    -->
+                        <input type="reset" onclick="cancel()" value="Cancel"> 
+                    </div>
+                    <!-- <input type="submit" name='Save'> -->
+                </form><br>
+                <a href="change_password.html">Change Password</a><br>
+                <a href="deactivate_acc.html">Deactivate Account</a>
+            </div>
+            
+            
+    
+            <!-- Manage Addresses -->
+            <div></div>
+            <div class="mid-box" id='manage_addr'>
+                <form action="#"><br>
+                    <h1>Manage Addresses</h1>
+                    <div class="add" onclick="add_addr()">
+                        <li class="inline">Add new Address</li>
+                        <span><i class="fa fa-plus inline fr"></i></span>
+                    </div>
+                    <div id="add_addr">
+                        <input type="text" placeholder="First Name" name="first_name" required>
+                        <input type="text" placeholder="Last Name" name="last_name">
+                        <input type="text" placeholder="Mobile Number" name='mobile' required>
+                        <input type="text" placeholder="Locality" name='locality' required><br>
+                        <textarea style='height:100px;' rows=5 placeholder="Address (Area and Street)" name='area' required></textarea><br>
+                        <div class="pin_web">
+                            <input style='width:50%' type="text" placeholder="City/Town" name='town' required>
+                            <input style='margin-left:2%; width:21%' type="text" placeholder="Pincode" name='pin' required>    
+                        </div>
+                        <div class="pin_mob">
+                            <input style='width:60%' type="text" placeholder="City/Town" name='town' required>
+                            <input style='margin-left:2%; width:35%' type="text" placeholder="Pincode" name='pin' required>    
+                        </div>
+                        <input type="text" placeholder="Landmark (optional)" name='landmark'><br>
+                        <div class="buttons">
+                            <input type="submit" value="Save"> 
+                            <!-- <button onclick="cancel()">Cancel</button>     -->
+                            <input type="reset" onclick="cancel()" value="Cancel"> 
+                        </div>
+                        </div><br>
+                    <div class="addr">
+                        <h4 class="inline">Hemanth</h4>
+                        <span><i class="fa fa-edit inline fr"></i></span>
+                        <p>#42/2, K P Agrahara, Magadi Road, Bangalore, Karnataka-560023</p>
+                        <p>Near Kadapaswamy Mata</p>
+                        <p>Mob No: 7676258650</p>
+                    </div>
+                </form>
+            </div>
+    
+    
+            <div></div>
+            <div class="mid-box" id="saved_cards">
+                <form action="#"><br>
+                    <h1>Manage Saved Cards</h1>
+                    <div  onclick="add_card()" class="add">
+                        <li class="inline">Add New Card</li>
+                        <span><i class="fa fa-plus inline fr"></i></span>
+                    </div>           
+                    <div id="add_card">
+                        <input type="text" placeholder="Enter Card Number" name="card_no" required>
+                        <input type="text" placeholder="Expiry Date" name="exp_dt" required>
+                        <input type="text" placeholder="CVV/CVC" name="cvv" required>
+                        <input type="text" placeholder="Name on Card" name='name_on_card' required>
+                        <div class="buttons">
+                            <input type="submit" value="Save"> 
+                            <!-- <button onclick="cancel()">Cancel</button>    -->
+                            <input type="reset" onclick="cancel()" value="Cancel"> 
+                        </div>    
+                    </div><br>
+                    <div class="cards addr">
+                        <h4 class="inline">State Bank of India Debit Card</h4>
+                        <span><i class="fa fa-trash inline fr"></i></span><br>
+                        <p style="padding:20px;" class="inline">1234 1234 1234 1234</p>
+                    </div>
+                    <div class="cards addr">
+                        <h4 class="inline">State Bank of India Debit Card</h4>
+                        <span><i class="fa fa-trash inline fr"></i></span><br>
+                        <p style="padding:20px;" class="inline">1234 1234 1234 1234</p>
+                    </div>
+                    <div class="cards addr">
+                        <h4 class="inline">State Bank of India Debit Card</h4>
+                        <span><i class="fa fa-trash inline fr"></i></span><br>
+                        <p style="padding:20px;" class="inline">1234 1234 1234 1234</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+<script>
+    var x = document.getElementById("personal_info");
+    var y = document.getElementById("manage_addr");
+    var z = document.getElementById("saved_cards");
+    var add_addrs = document.getElementById('add_addr');
+    var add_cards = document.getElementById('add_card')
+
+    function personal_info() {
+          x.style.display = "block";
+          y.style.display = "none";
+          z.style.display = "none";
+      }
+
+    function manage_addr() {
+        x.style.display = "none";
+        y.style.display = "block";
+        z.style.display = "none";
+      }
+    function saved_cards() {
+        x.style.display = "none";
+        y.style.display = "none";
+        z.style.display = "block";
+      }
+
+    function add_addr(){
+        add_addrs.style.display = 'block'
+    }
+
+    function add_card(){
+        add_cards.style.display = 'block'
+    }
+
+    function cancel(){
+        add_cards.style.display = 'none';
+        add_addrs.style.display = 'none';
+    }
+</script>
+</body>
+</html>

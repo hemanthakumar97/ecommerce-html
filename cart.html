@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/cart.css">
+    <title>HKTECH | Cart</title>
+    <style>
+        *{
+            padding: 0; 
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        body{
+            background:#F3F3F3;
+        }
+        
+        nav{
+            background: black;
+            height: 60px;
+            width: 100%;
+        }
+        
+        label.logo{
+            font-size: 30px;
+            padding-left:100px;
+            line-height: 60px;
+        }
+        
+        nav ul{
+            float: right;
+            margin-right: 100px;
+        }
+        
+        nav ul li{
+            line-height: 60px;
+            margin: 0px 25px;
+        }
+        
+        nav ul li a{
+            font-size: 16px;
+            padding: 6px 13px;
+            border-radius: 10px;
+            color: white;
+            font-family: 'Segoe UI';
+            font-weight: bold;
+        }
+
+        nav label{
+            color: white;
+            font-family: 'Segoe UI';
+            font-weight: bold;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <nav>
+        <a href="index.html"><label class='logo'>HKTECH SHOP</label></a>
+         <ul class="nav_link">
+             <!-- <li><a href="#">Hello Hemanth</a></li> -->
+             <!-- <li><a href="payment.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i> cart</a></li> -->
+        </ul>
+    </nav>
+
+    <div class="cart_head">
+        <h2 id='title'>Shopping Cart</h2> 
+    </div>
+    <div class="cart_content">
+        <div class="shopping_cart">
+        <form action="">
+
+            <!-- item 1 -->
+            <div class="cart_item">
+                <div class="check_item"><input type="checkbox"></div>
+                <div class="item_image"><img src="images/iphone10.jpg" alt=""></div>
+                <div class="item_description">
+                    <h2>Apple 11 Pro</h2>
+                    <div class="item_price">
+                        <h3>Rs.70000</h3> 
+                        <del>Rs.70000</del>  
+                        <del>MRP</del>
+                    </div>
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <select name="quantity" id="">
+                        <option value="1">Qty: 1</option>
+                        <option value="2">Qty: 2</option>
+                        <option value="3">Qty: 3</option>
+                        <option value="4">Qty: 4</option>
+                        <option value="5">Qty: 5</option>
+                        <option value="6">Qty: 6</option>
+                        <option value="7">Qty: 7</option>
+                        <option value="8">Qty: 8</option>
+                        <option value="9">Qty: 9</option>
+                        <option value="10">Qty: 10</option>
+                    </select><br>
+                    <p>No cost EMI Available</p>
+                </div>
+                <!-- <div>
+                    Delivery by
+                </div> -->
+            </div>
+
+            <div class="cart_item">
+                <div class="check_item"><input type="checkbox"></div>
+                <div class="item_image"><img src="images/iphone10.jpg" alt=""></div>
+                <div class="item_description">
+                    <h2>Apple 11 Pro</h2>
+                    <div class="item_price">
+                        <h3>Rs.70000</h3> 
+                        <del>Rs.70000</del>  
+                        <del>MRP</del>
+                    </div>
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <select name="quantity" id="">
+                        <option value="1">Qty: 1</option>
+                        <option value="2">Qty: 2</option>
+                        <option value="3">Qty: 3</option>
+                        <option value="4">Qty: 4</option>
+                        <option value="5">Qty: 5</option>
+                        <option value="6">Qty: 6</option>
+                        <option value="7">Qty: 7</option>
+                        <option value="8">Qty: 8</option>
+                        <option value="9">Qty: 9</option>
+                        <option value="10">Qty: 10</option>
+                    </select><br>
+                    <p>No cost EMI Available</p>
+                </div>
+                <!-- <div>
+                    Delivery by
+                </div> -->
+            </div>
+
+            <!-- item 2 -->
+
+            <div class="cart_item">
+                <div class="check_item"><input type="checkbox"></div>
+                <div class="item_image"><img src="images/samsung.jpeg" alt=""></div>
+                <div class="item_description">
+                    <h2>Apple 11 Pro</h2>
+                    <div class="item_price">
+                        <h3>Rs.70000</h3> 
+                        <del>Rs.70000</del>  
+                        <p>MRP</p>
+                    </div>
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <select name="quantiti" id="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <p>No cost EMI Available</p>
+                </div>
+                <!-- <div>
+                    Delivery by
+                </div> -->
+            </div>
+            
+            <!-- item 3 -->
+
+            <div class="cart_item">
+                <div class="check_item"><input type="checkbox"></div>
+                <div class="item_image"><img src="images/samm31.jpeg" alt=""></div>
+                <div class="item_description">
+                    <h2>Apple 11 Pro</h2>
+                    <div class="item_price">
+                        <h3>Rs.70000</h3> 
+                        <p>Rs.70000</p>  
+                        <p>MRP</p>
+                    </div>
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <select name="quantiti" id="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <p>No cost EMI Available</p>
+                </div>
+                <!-- <div>
+                    Delivery by
+                </div> -->
+            </div>
+            
+            <!-- item 4 -->
+
+            <div class="cart_item">
+                <div class="check_item"><input type="checkbox"></div>
+                <div class="item_image"><img src="images/wifi module.jpeg" alt=""></div>
+                <div class="item_description">
+                    <h2>Apple 11 Pro</h2>
+                    <div class="item_price">
+                        <h3>Rs.70000</h3> 
+                        <p>Rs.70000</p>  
+                        <p>MRP</p>
+                    </div>
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <select name="quantiti" id="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <p>No cost EMI Available</p>
+                </div>
+                <!-- <div>
+                    Delivery by
+                </div> -->
+            </div>
+
+            </form>
+        </div>
+        <div class="price_details">
+            <div style="font-weight: bold; ">PRICE DETAILS</div><div></div>
+            <div>Price</div> <div>T price</div>
+            <div>D Price</div> <div>D price</div>
+            <div>T Price</div> <div>T price</div>
+        </div>
+    </div>
+    <button  class="btm-btn">Place Order</button>
+
+
+</body>
+</html>
